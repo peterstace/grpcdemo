@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package calc;
+
+message Number {
+  string num = 1;
+}
+
+message Numbers {
+  string num1 = 1;
+  string num2 = 2;
+}
+
+service Calculator {
+  rpc Add(Numbers) returns (Number) {}
+}
